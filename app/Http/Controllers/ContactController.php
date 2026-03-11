@@ -32,7 +32,8 @@ class ContactController extends Controller
     {
         $this->contactService->createContact($request->all());
 
-        return redirect()->route('contacts.index');
+        return redirect()->route('contacts.index')
+        ->with('success', 'Contact ajouté avec succès !');
     }
 
     public function edit($id)
@@ -46,14 +47,16 @@ class ContactController extends Controller
     {
         $this->contactService->updateContact($id, $request->all());
 
-        return redirect()->route('contacts.index');
+        return redirect()->route('contacts.index')
+        ->with('success', 'Contact modifié avec succès !');
     }
 
     public function destroy($id)
     {
         $this->contactService->deleteContact($id);
 
-        return redirect()->route('contacts.index');
+        return redirect()->route('contacts.index')
+        ->with('success', 'Contact supprimé avec succès !');
     }
 
 }

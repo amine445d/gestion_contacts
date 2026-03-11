@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -253,13 +254,47 @@
         tbody tr:nth-child(4)  { animation-delay: 0.17s; }
         tbody tr:nth-child(5)  { animation-delay: 0.21s; }
         tbody tr:nth-child(6)  { animation-delay: 0.25s; }
+
+        /* Alert success */
+.alert-success {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f0faf4;
+    border: 1px solid #a7dfbc;
+    border-left: 4px solid #22c55e;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 28px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #166534;
+    animation: fadeUp 0.4s ease both;
+}
+
+.alert-success::before {
+    content: '';
+    display: inline-flex;
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%2322c55e' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
     </style>
 </head>
 <body>
 
 <div class="container">
 
-    <!-- En-tête -->
+  <div class="container">
+
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
     <div class="page-header">
         <h1>
             <span>Répertoire</span>

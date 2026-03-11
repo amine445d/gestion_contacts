@@ -207,17 +207,17 @@
 
             <div class="field">
                 <label for="nom">Nom</label>
-                <input type="text" id="nom" name="nom" value="{{ $contact->nom }}" placeholder="Jean Dupont">
+                <input type="text" id="nom" name="nom" value="{{ $contact->nom }}" placeholder="">
             </div>
 
             <div class="field">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" value="{{ $contact->email }}" placeholder="jean@exemple.com">
+                <input type="email" id="email" name="email" value="{{ $contact->email }}" placeholder="">
             </div>
 
             <div class="field">
                 <label for="telephone">Téléphone</label>
-                <input type="text" id="telephone" name="telephone" value="{{ $contact->telephone }}" placeholder="+212 6 00 00 00 00">
+                <input type="text" id="telephone" name="telephone" value="{{ $contact->telephone }}" placeholder="">
             </div>
 
             <div class="form-actions">
